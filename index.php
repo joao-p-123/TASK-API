@@ -1,8 +1,14 @@
 <?php
-require_once 'config/Database.php';
 
-$database = new Database();
+require_once "autoload.php";
 
-$connection = $database->connect();
+$usuario = new Usuario();
 
-echo "Database connection successful!";
+$usuario->setNome("João Pedro");
+$usuario->setEmail("joao@email.com");
+
+echo $usuario->getNome();
+
+echo "<br>";
+
+echo $usuario->getEmail();
